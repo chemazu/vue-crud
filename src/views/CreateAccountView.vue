@@ -16,10 +16,21 @@
               type="text"
               class="form-control"
               id="name"
-              v-model="name"
+              v-model="user.name"
               placeholder="Enter name"
             />
           </div>
+          <div class="form-group">
+            <label for="name">age</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              v-model="user.age"
+              placeholder="Enter name"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
         </form>
       </div>
 
@@ -37,7 +48,17 @@ export default {
   data() {
     return {
       message: "CreateAccount",
+      user: {
+        name: "",
+        age: "",
+      },
     };
+  },
+  methods: {
+    onSubmit() {
+      // this.$router.push("/about");
+      console.log(this.user.name);
+    },
   },
 };
 </script>
