@@ -10,7 +10,13 @@
       </div>
       <div className="form">
         <form @submit.prevent="onSubmit" method="POST">
-          <div class="form-group">
+          <div class="form-row">
+            <div class="form-item">
+              <p>First Name</p>
+              <input type="text" v-model="user.fname" />
+            </div>
+          </div>
+          <div class="form-item">
             <label for="name">Name</label>
             <input
               type="text"
@@ -20,7 +26,7 @@
               placeholder="Enter name"
             />
           </div>
-          <div class="form-group">
+          <div class="form-item">
             <label for="name">age</label>
             <input
               type="text"
@@ -49,6 +55,7 @@ export default {
     return {
       message: "CreateAccount",
       user: {
+        fname: "",
         name: "",
         age: "",
       },
