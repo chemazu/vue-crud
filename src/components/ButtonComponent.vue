@@ -8,6 +8,9 @@
 
 <script>
 export default {
+  //   components: {
+  //     ButtonComponent,
+  //   },
   props: ["title", "className", "onclick", "type"],
   //   props: {
   //     class: {

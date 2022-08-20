@@ -8,30 +8,29 @@
         </p>
       </div>
       <form @submit.prevent="handleSubmit">
-        <div class="form-row">
+        <div class="form-item">
           <p>User Name</p>
           <input type="text" v-model="name" />
         </div>
-        <div class="form-row">
+        <div class="form-item">
           <p>Email</p>
           <input type="email" v-model="email" />
         </div>
-        <div class="form-row">
+        <div class="form-item">
           <p>Email</p>
           <input type="password" v-model="password" />
         </div>
-        <!-- <button type="submit">Register User</button> -->
-        <!-- <ButtonComponent title="Register" className="pry" type="submit" /> -->
-        <!-- add type -->
+        <div class="button-wrapper">
+          <ButtonComponent title="Register" className="pry" type="submit" />
+        </div>
       </form>
-      <ButtonComponent @increase-by="handleClick" />
     </div>
   </div>
 </template>
 
 <script>
 import { registerUser } from "../services/Auth";
-import ButtonComponent from "../components/ButtonComponent";
+// import ButtonComponent from "../components/ButtonComponent";
 export default {
   data() {
     return {
@@ -39,7 +38,6 @@ export default {
       email: "",
       password: "",
       terms: false,
-      count: 0,
     };
   },
   methods: {
@@ -60,9 +58,9 @@ export default {
         });
     },
   },
-  components: {
-    ButtonComponent,
-  },
+  // components: {
+  //   ButtonComponent,
+  // },
 };
 </script>
 
