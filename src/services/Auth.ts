@@ -6,6 +6,7 @@ const registerUser = async (user: {
   name: string;
 }) => {
   const response = await axios.post("/api/account/register", user);
+  localStorage.setItem("token", response.data.token);
   return response.data;
 };
 export { registerUser };
